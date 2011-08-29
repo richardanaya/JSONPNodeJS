@@ -1,0 +1,17 @@
+<html>
+    <head>
+	<script src='js/jquery.js'></script>
+    </head>
+    <body>
+    </body>
+    <script>
+	$.getJSON("/motd?callback=?",
+	{
+	    name: "Richard"
+	},
+	function(motd) {
+	    // Handle response here
+	    console.info("Message of the Day: ",motd);
+	});
+    </script>
+</html>
