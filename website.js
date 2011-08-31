@@ -11,6 +11,8 @@ server.configure(
 
 server.get('/motd', 
     function(req, res) {
+    	res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "X-Requested-With");
 	res.json('All your base are belong to us '+req.query.name+'.');
     }
 );
